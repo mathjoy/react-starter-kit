@@ -27,7 +27,11 @@ function localUrl(url) {
 }
 
 function localFetch(url, options) {
-  return fetch(localUrl(url), options);
+
+  var rt=localUrl(url);
+  console.log(" !!!!=========get data from ", rt, options);
+
+  return fetch(rt, options);
 }
 
 export { localFetch as default, Request, Headers, Response };

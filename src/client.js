@@ -16,6 +16,7 @@ import { readState, saveState } from 'history/lib/DOMStateStorage';
 import { addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import cs from 'react-intl/locale-data/cs';
+import zh from 'react-intl/locale-data/zh';
 import routes from './routes';
 import createHistory from './core/createHistory';
 import configureStore from './store/configureStore';
@@ -27,7 +28,7 @@ import {
 } from './core/DOMUtils';
 import Provide from './components/Provide';
 
-[en, cs].forEach(addLocaleData);
+[en, zh,cs].forEach(addLocaleData);
 
 const context = {
   store: null,
